@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Function task3</title>
+    </head>
+    <body>
+        <script>
+              let percentage = Number(prompt("Enter the mobile percantage"))
+        function Battery(percentage)
+        {
+         if( percentage < 20){
+            document.write("Charge Now!")
+         }
+         else if(percentage >= 20 && percentage <= 80){
+            document.write("Battery OK") 
+         }
+         else if(percentage >= 80 || percentage <= 100){
+            document.write("Fully Charged")
+         }
+         else{
+            document.write("Invalid")
+         }
+        }
+        Battery(percentage);
+    </script>
+    
+    </body>
+</html>

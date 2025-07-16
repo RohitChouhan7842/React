@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Function task2</title>
+    </head>
+    <body>
+        <script>
+              let count  = Number(prompt("Asking the user how many times he drank water"))
+        function CheckHydration(count)
+        {
+         if( count < 3){
+            document.write("Your dehydrated,drink more water")
+         }
+         else if(3 < count < 7){
+            document.write("Good job keep it up")
+         }
+         else if(count == 7){
+            document.write("Excellent job")
+         }
+         else{
+            document.write("Invalid")
+         }
+        }
+        CheckHydration(count);
+        </script>
+    
+    </body>
+</html>

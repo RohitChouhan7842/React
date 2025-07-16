@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Stop Watch</title>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      background:white;
+      padding: 0px;
+      
+    }
+    h1{
+      color: white;
+      text-align: center;
+    }
+    #container {
+     width: 600px;
+     height: 300px;
+      margin: auto;
+      padding: 20px;
+      background:linear-gradient(to right,red,green,rgb(27, 90, 206),yellow);
+      box-shadow: 0 0 10px #686868;
+      border-radius: 10px;
+      
+    }
+    #box {
+        width: 550px;
+     height: 60px;
+      margin: auto;
+      padding: 20px;
+      background: #474343;
+      box-shadow: 0 0 10px #1a1919;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+    }
+    #timer {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            margin: 5px 0px;
+        }
+        button {
+            margin: 35px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+        }
+        button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+        button:active {
+            background-color: navy;
+            color: white;
+        }
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 5px #fff;
+        }
+        button:disabled {
+            background-color: grey;
+            color: lightgrey;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+  <h1>TIMER</h1>
+  <div id="box">
+     <h1 id="timer">00:00:00:00</h1>
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+            </div>
+
+  <script>
+       let timerInterval;
+        let elapsedTime = 0; 
+
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            const milliseconds = String(ms % 1000).padStart(3, '0').slice(0, 2);
+           return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+        }
+
+        function updateTimer() {
+            elapsedTime += 10; // increment by 10 milliseconds
+            document.getElementById('timer').textContent = formatTime(elapsedTime);
+        }
+
+        document.getElementById('startBtn').addEventListener('click', () => {
+            if (!timerInterval) {
+                timerInterval = setInterval(updateTimer, 10);
+            }
+        });
+
+        document.getElementById('pauseBtn').addEventListener('click', () => {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            elapsedTime = 0;
+            document.getElementById('timer').textContent = formatTime(elapsedTime);
+        });
+  </script>
+    
+</body>
+</html>

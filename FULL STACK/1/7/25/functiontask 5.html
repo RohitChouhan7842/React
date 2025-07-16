@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function task 5</title>
+</head>
+<body>
+    <script>
+        let devicename = prompt("Enter the device name")
+        function getChargingtime(devicename){
+           switch(devicename){
+            case "phone":
+                document.write("IT takes 2hrs to charge")
+                break;
+            case "laptop":
+                document.write("IT takes 3hrs to charge")
+                break;
+            case"tablet":
+                document.write("It takes 3hrs to charge")
+                break;
+            default:
+                document.write("Invalid device name")
+            
+        }
+    }
+    getChargingtime(devicename);
+        
+    </script>
+    
+</body>
+</html>

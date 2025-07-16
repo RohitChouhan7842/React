@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Finction task 4</title>
+    </head>
+    <body>
+        <script>
+              let days  = Number(prompt("Ask number of day after placing order"))
+        function Checkdeliverystatus(count)
+        {
+         if( days == 0){
+            document.write("Order Placed")
+         }
+         else if(days>1 && days<3){
+            document.write("In Transit")
+         }
+         else if(days>4){
+            document.write("Deliverd or late")
+         }
+         else{
+            document.write("Invalid")
+         }
+        }
+        Checkdeliverystatus(days);
+        </script>
+    
+    </body>
+</html>

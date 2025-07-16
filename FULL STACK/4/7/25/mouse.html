@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events</title>
+  <style>
+    #demo {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mouse Events</h2>
+
+  <button onclick="alert('You clicked me!!!')">Click Me</button>
+  <br><br>
+
+  <button onclick="Greet()">Call Function</button>
+  <br><br>
+
+  <p oncontextmenu="rytClick(); return false;">Right-click me to see options</p>
+
+  <h2 ondblclick="db()">Double Click</h2>
+
+  <div id="demo" onmouseover="over()" onmouseout="out()">
+    I am a div element
+  </div>
+  <br>
+
+  <button id="btn" onkeydown="down()" onkeyup="up()">Draw</button>
+
+  <script>
+    function Greet() {
+      alert("Function called successfully...");
+    }
+
+    function rytClick() {
+      alert("You right-clicked on the paragraph");
+    }
+
+    function db() {
+      alert("You double-clicked on the heading");
+    }
+
+    function over() {
+      let div = document.getElementById("demo");
+      div.style.backgroundColor = "red";
+      div.style.height = "300px";
+      div.style.width = "300px";
+    }
+
+    function out() {
+      let div = document.getElementById("demo");
+      div.style.backgroundColor = "blue";
+      div.style.height = "100px";
+      div.style.width = "100px";
+    }
+
+    function down() {
+      let btn = document.getElementById("btn");
+      btn.textContent = "Image is being drawn...";
+    }
+
+    function up() {
+      let btn = document.getElementById("btn");
+      btn.textContent = "Drawing completed...";
+    }
+  </script>
+
+</body>

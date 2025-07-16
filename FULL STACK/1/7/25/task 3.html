@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator By using the Swtich case</h1>
+    <script>
+        let a = Number(prompt("Enter the first number"))
+        let b = Number(prompt("Enter the second number"))
+        let operator = prompt("Enter the operator")
+      switch(operator){
+        case "+":
+          document.write("Addtion is : "+a+b)
+          break;
+        case "-":
+          document.write("Subtraction is : "+a-b)
+          break;
+        case "*":
+          document.write("Multiplication is : "+a*b)
+          break;
+        case "/":
+          document.write("Division is : "+a/b)
+          break;
+          default:
+        document.write("Invalid operator")
+      }   
+    </script>
+    
+</body>
+</html>

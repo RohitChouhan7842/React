@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <h1> BY using the local Storgae</h1>
+    <script>
+        let student ={
+
+            name:"Rohit",
+            age:18,
+            rollNO:99,
+            address:"Hyderabad"
+        }
+        localStorage.setItem("student", JSON.stringify(student));
+
+        let studentobj = JSON.parse(localStorage.getItem("student"));
+        console.log(studentobj.name);
+        console.log(studentobj.age);
+        console.log(studentobj.rollNO);
+
+        let array ={"name":"Rohit","rollNO":99,"address":"Hyderabad"};
+        localStorage.setItem("array", JSON.stringify(array));
+        let arrayobj = JSON.parse(localStorage.getItem("array"));
+        console.log(arrayobj);
+
+
+    </script>
+    
+</body>
+</html>

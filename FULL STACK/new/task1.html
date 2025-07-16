@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Card maker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+      <form>
+        <label style="font-size:20px; font-weight:bold">Enter the name:</label><br><br>
+        <input type="text" name="name" placeholder="Enter your name" required  id="input1"/>
+        <br><br>
+         <label style="font-size:20px; font-weight:bold">Short Bio:</label><br><br>
+        <textarea type="text" rows="4" cols="40" placeholder="Enter the BIO" required id="input2"></textarea>
+        <br><br>
+       <label style="font-size:20px; font-weight:bold">Upload File:</label><br><br>
+        <input type="file" name="file" required id="input3"><br><br>
+        <label style="font-size:20px; font-weight:bold">Upload Image:</label><br><br>
+        <input type="file" name="file" accept="image/*" required id="input3"><br><br>
+        <label style="font-size:20px; font-weight:bold">Select the Border Style:</label>
+        <select id="input3"> 
+            <option value="Border">None</option>
+            <option value="Border">Square</option>
+            <option value="Border">Circle</option>
+            <option value="Border">Rounded</option>
+        </select><br><br>
+        <button  type="submit" id="input3">Generate Card</button>
+      </form>
+          </div>
+    </div>
+    
+</body>
+</html>

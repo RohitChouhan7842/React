@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <h1>Local storages</h1>
+    <script>
+        localStorage.setItem(100,"Rohit");
+        localStorage.setItem(102,"Shamitha");
+        localStorage.setItem(101,"Akash");
+        
+        let name = localStorage.getItem(100);
+        console.log(name);
+        //remove the item
+        localStorage.removeItem(102);
+
+        console.log(localStorge.length);
+    </script>
+    
+</body>
+</html>

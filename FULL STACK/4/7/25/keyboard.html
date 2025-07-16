@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Events</title>
+  <style>
+    #demo {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h2>Keyboard Events</h2>
+  Username:<input type="text"
+   id="uname"
+    placeholder="Enter username" 
+    onkeyup="keyUp()"
+  onkeydown="keyDown()"/>
+
+  <script>
+
+
+
+    function keyUp() {
+      let btn = document.getElementById("uname");
+      uname.style.border="3px solid red"
+      uname.style.backgroundColor="black"
+        uname.style.color="white"
+    }
+
+    function keyDown() {
+      let btn = document.getElementById("uname");
+      uname.style.border="3px solid blue"
+      uname.style.backgroundColor="aqua"
+
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chat Ui output</title>
+        <style>
+            body{
+                font-family:Arial;
+                background:hotpink;
+                display:flex;
+                justify-content:center;
+                padding-top:50px;
+            }
+            .chat-container{
+                width:400px;
+                background:white;
+                border-radius:10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                overflow:hidden;
+                display:flex;
+                flex-direction:column;
+            }
+            .chat-header {
+                background-color:aqua;
+                color:white;
+                padding:15px;
+                font-size:18px;
+                text-align:center;
+            }
+            .chat-body{
+                padding:20px;
+                height:400px;
+                overflow-y:auto;
+                background-color:#f0f0f0;
+                flex-grow:1;
+            }
+            .message {
+                padding:10px;
+                margin:8px;
+                border-radius:10px;
+                max-width:70%;
+                clear:both;
+                word-wrap:break-word;
+            }
+            .you{
+                background-color:#DCF8C6;
+                float:right;
+                text-align:right;
+            }
+            .friend{
+                background-color:#ffffff;
+                float:left;
+                text-align:left;
+                border: 1px solid #ccc;
+            }
+            .sender{
+                font-weight:bold;
+                margin-bottom:5px;
+            }
+            .input-area {
+                display:flex;
+                gap:5px;
+                padding:10px;
+                border-top:1px solid #ccc;
+            }
+            input{
+                flex-grow:1;
+                padding:10px;
+                border:1px solid #ccc;
+                border-radius:5px;
+                outline:none;
+            }
+            button{
+                padding:10px;
+                background-color:#383ef2;
+                color:white;
+                border:none;
+                border-radius:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chat-container">
+            <div class="chat-header">Chat System</div>
+            <div class="chat-body" id="chatBody"></div>
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Type a message..">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+  </div>
+
+        <script>
+            
+            let messages = [];
+            let isMyTurn = true;
+
+            function sendMessage() {
+                let input = document.getElementById("messageInput");
+                let text = input.value.trim();
+                if (text == "") return;
+
+                let sender = isMyTurn ? "you" : "Friend";
+                let msg = {
+                    sender: sender,
+                    text: text
+                };
+                messages.push(msg);
+                isMyTurn = !isMyTurn;
+                input.value = "";
+                displayMessage();
+            }
+
+            function displayMessage() {
+                let chatBody = document.getElementById("chatBody");
+                chatBody.innerHTML = "";
+
+                for (let i = 0; i < messages.length; i++) {
+                    let msg = messages[i];
+                    let div = document.createElement("div");
+
+                    div.className = "message " + (msg.sender === "you" ? "you" : "friend");
+                    div.innerHTML = `<div class="sender">${msg.sender}</div>${msg.text}`;
+                    chatBody.appendChild(div);
+                }
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        </script>
+</html>

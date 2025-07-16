@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>function call</title>
+        </head>
+    <body>
+        <button id="btn">Click me</button>
+    <script>
+        function first() {
+      alert("first function called");
+    }
+    function second()
+    {
+        alert("second function called")
+    }
+
+    let btn=document.getElementById("btn")
+    /*
+btn.onclick=first;
+//
+btn.onclick=second;*/
+btn.addEventListener("click", first);
+btn.addEventListener("click", second);
+//btn.removeEventListener("click", first)
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+       <h1>Employee Details</h1>
+        
+        <form id="employeeForm">
+            <input type="text" id="employeeName" placeholder="Employee Name" required>
+            <input type="text" id="employeeTitle" placeholder="employee Title" required>
+            <button type="submit">Add Employee</button>     
+           </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee name</th>
+                    <th>Employee Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="employeeList">
+                <!--Employees will be displayed here-->
+            </tbody>
+        </table>
+        <script src="script.js"></script>
+      </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Function task 1</title>
+    </head>  
+          <script>
+            let userGuess = Number(prompt("Enter the number"))
+        function guessNumber(userGuess)
+        {
+         if(userGuess < 7){
+            document.write("Too Low")
+         }
+         else if(userGuess > 7){
+            document.write("Too High")
+         }
+         else if(userGuess == 7){
+            document.write("correct")
+         }
+         else{
+            document.write("Invalid")
+         }
+        }
+    
+        guessNumber();
+
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Events</title>
+  <style>
+    #demo {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <form onclick="validation(event)">
+    <h2>Keyboard Events</h2>
+  Username:<input type="text" id="uname" placeholder="Enter username" required/>
+    <button type="submit">Submit</button>
+</form>
+  <script>
+    function validation(e){
+        e.preventDefault();
+        alert("Form is Submitted Succesfully");
+    }
+
+</script>
+
+  
+
+</body>
+</html>

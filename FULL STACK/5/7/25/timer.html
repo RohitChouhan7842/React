@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size:50px;
+            background-color:green;
+            color:white;
+            border:none;
+            border-radius:10px;
+            width:800px;
+           
+            
+        }
+    </style>
+</head>
+<body style="background-color:black; color:white; font-size:200px; text-align:center;">
+        <script>
+        function displayTime()
+        {
+            let date=new Date()
+            document.getElementById("clk").innerHTML=date.toLocaleTimeString()
+
+        }
+        function stopTimer()
+        {
+            clearInterval(intervalId)
+        }
+        intervalId=setInterval(displayTime,1000)
+    </script>
+    <p><span id="clk"></span></p>
+    <button onclick="stopTimer()">Stop Timer</button>
+
+</b>
+
+</body>
+</html>

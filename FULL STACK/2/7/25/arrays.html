@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Arrays Conccept</title>
+    </head>
+    <body>
+    <script>
+        let names = ["Rohit","Akash","Sreehari","SreeCharan","Thrinadh"]
+        let fruit =["Mango","Apple","Banana","Grapes","Orange"]
+        let animals=["Lion","Cheetha","Gorilla","Monkey"]
+        let arr=[]
+        let arr1= new Array()
+        console.log(arr1+" " +typeof arr1)
+        console.log(arr + " " +typeof arr)
+        
+        console.log(names)
+        console.log(fruit)
+        console.log(animals)
+       console.log ("-----By using the for loop-----")
+
+       for(let i=0;i<names.length;i++){
+        console.log(names[i])
+       
+       }
+
+        console.log("----By using the for of  loop-----")
+        for(name of names){
+            console.log(name)
+
+        }
+        console.log("-----By using th for in loop-----")
+        for(nam in names){
+            console.log(nam)
+        }
+
+                 console.log("=== array names===")
+                 names.push("Malla reddy")
+                 names.unshift("Kavita")
+                 console.log(names)
+                 names.pop()
+                 names.shift()
+                 names.splice(0,1,"Satya","keerti")
+                 console.log(names)
+                 let extract=names.slice(3,5)
+                 console.log(extract)
+                 console.log(names)
+                 console.log(names.concat(fruits,animals))
+                 console.log("=== array names===")
+
+                 let str=names.toString()
+                 console.log(str)
+                 console.log(names.join(''))
+                 console.log(names.join(','))
+                 console.log(names.join('-'))
+
+                 
+                 console.log(fruits.indexOf("Apple"))
+                 console.log(fruits.lastIndexOf("Apple"))
+
+                 let sorted=fruits.sort()
+                 console.log(sorted)
+
+                 let values=[10,20,5,2,100,50,77,40,3,4]
+
+                 console.log(values.sort()(
+                    function(a,b)
+                    {
+                        return a-b;
+                    }
+                 ))
+                 console.log(nums.find(function(ele)
+                 {
+                    return ele>30;
+                 }))
+
+                 console.log(nums.findIndex(function(ele)
+                 {
+                    return ele>30;
+                 }))
+                 console.log(nums.filter(ele => ele%2==0))
+                 console.log(nums.map(ele => ele+5))
+
+                 
+
+
+             
+
+
+
+
+
+    </script>
+    </body>
+</html>

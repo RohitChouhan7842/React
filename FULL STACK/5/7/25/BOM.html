@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <title>bom</title>
+        </head>
+        <body>
+            <button onclick="setTimeout(()=>{alert('function called later')},5000)">after sometime</button>
+            <script>
+    
+        
+
+                function WindowSize()
+                {
+                    document.write("height:"+window.innerHeight+"width:"+window.innerWidth+"<hr>")
+                }
+                function screenSize(){
+                    document.write("screen height"+screen.height+"screen width"+screen.width+"<hr>")
+                }
+                function availsize()
+                {
+                    document.write("avail height"+screen.availHeight+"avail width:"+screen.availWidth+"<hr>")
+                }
+            </script>
+            <button onclick="WindowSize()">window size</button>
+            <button onclick="screenSize()">screen size</button>
+            <button onclick="availsize()">avail size</button>
+            
+
+        </body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Objectt Conccept</title>
+    </head>
+    <body>
+        <script>
+
+                let obj={}
+                console.log(obj)
+                console.log(typeof obj)
+
+                const person={
+                    name:"Rohit",
+                    age:19,
+                    address:"Hyderabad"
+                }
+                console.log(person)
+
+                console.log(person.name+" "+person.age+" "+person.address)
+
+                console.log(person["name"]+" "+person["age"]+" "+person["address"])
+
+                person.name="Rohit"
+                console.log(person)
+
+                person.salary=70000,
+                console.log(person)
+
+                delete person.name;
+                console.log(person)
+
+                for(p in person)
+                {
+                    console.log(p+"--"+person[p])
+                }
+
+                const student={
+                    name:"Rohit",
+                    age:23,
+                    address:{
+                        street:"banjarahills",
+                        state:"telangana",
+                        pincode:"500032",
+                        contact:{
+                            email:"amitsia65@gmail.com",
+                            phonenumber:{
+                                personal:9398275874,
+                                gardian:9912568611
+                            }
+                        }
+                    }
+                }
+                console.log(student)
+         console.log(student.address.contact.phonenumber)
+
+
+        </script>
+    
+    </body>
+</html>

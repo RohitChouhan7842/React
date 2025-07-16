@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> Movie </title>
+    </head>
+    <body>
+        <script>
+            let name= prompt("Enter your name:")
+            document.write("<h1>Movie Ticket Recipt</h1>")
+            document.write("Name: "+name+"<hr>")
+            
+            
+            let movie1 = prompt("Enter 1st movie name:");
+            let price1  = Number(prompt("Enter Ticket price"));
+
+            let movie2 = prompt("Enter 2nd movie name:");
+            let price2  = Number(prompt("Enter Ticket price"));
+
+            let movie3 = prompt("Enter 3rd movie name:");
+            let price3  = Number(prompt("Enter Ticket price"));
+
+            let mov_name = [movie1,movie2,movie3];
+            let price = [price1,price2,price3];
+            
+            
+            document.write(mov_name[0]+"--"+price[0]+"<br>")
+            document.write(mov_name[1]+"--"+price[1]+"<br>")
+            document.write(mov_name[2]+"--"+price[2]+"<br>"+"<hr>")
+           
+
+            let tot = price1 + price2 + price3;
+            document.write("Total: "+tot+"<br>")
+
+            if(tot > 500){
+                let discount = tot * 0.10;
+                tot = tot - discount;
+                document.write("Discount Applied: 10% <br>");
+            }
+            else{
+                document.write("Discount: Null<br>");
+            }
+            document.write("Final amount: " + tot);
+                  </script>
+ </body>
+ </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+    </head>
+<body>
+    <script>
+        function Greet()
+        {
+         document.write("Named function")
+        }
+        Greet();
+        document.write("<hr>")
+
+        document.write("Default function"+"<br>")
+        function GetSalary(salary=10000)
+        {
+            document.write("Internship salary is:"+salary+"<br>")
+        }
+        GetSalary();
+        GetSalary(12000);
+
+        document.write("Anonymous function"+"<br>")
+
+        let result=function()
+        {
+            document.write("Name less function"+"<br>")
+        }
+        result();
+
+        document.write(" Arrow function"+"<br>")
+
+    let answr=()=>{document.write("I am a student using arrow function"+"<br>")}
+    answr();
+
+    let sum= (a,b)=>{return a+b;}
+    document.write("result is "+sum(12,12)+"<br>")
+    document.write("result is "+sum(32,45)+"<br>")
+
+    document.write("ITFE Function"+"<br>")
+
+    (function() 
+    {  
+       document.write("I am ITFE function")
+    } )();
+
+    
+
+    </script>
+</body>
+</html>

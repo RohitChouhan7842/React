@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <head>
+        <title>Paragraph</title>
+        <body>
+            <h1>Paragraph writing in html tags in js</h1>
+            <p id="demo">Welcome to tourism spot</p>
+            <script>
+                let para= document.getElementById("demo")
+                para.innerHTML="<b> Welcome to Telangana zarurana </b>"
+                para.style.backgroundColor="aqua";
+                para.style.color="red";
+                console.log(para)
+                let att=para.getAttribute("id")
+                console.log(att)
+            </script>
+        </body>
+</html>

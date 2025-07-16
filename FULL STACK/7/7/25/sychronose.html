@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sychronise</title>
+</head>
+<body>
+    <script>
+        console.log("Sychronise Operations")
+        console.log("1")
+        console.log("2") 
+        console.log("3")
+        console.log("4" + "<br>")
+
+        console.log("ASychronise Operations")
+        console.log("1")
+        setTimeout(() => {console.log("2")}, 1000);
+        console.log("3")
+        console.log("4" + "<br>")
+
+        console.log("Call Back Function")
+
+      
+    getuser(function(user)
+    {
+        getmarks(function(marks)
+        {
+            getresult(function(result)
+            {
+                console.log(result)
+            })
+        })
+    })
+        let marks = 75
+        let p =new Promise((resolve,reject)=>{
+            if(marks>=35)
+            {
+                resolve("Pass")
+            }
+            else
+            {
+                reject("Fail")
+            }
+        })
+
+    p.then(msg=>{document.write(msg)})    
+</script>
+    
+</body>
+</html>

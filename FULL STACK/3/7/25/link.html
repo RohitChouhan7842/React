@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By using the Attribute</title>
+</head>
+<body>
+    <p>Welcome to flipkart <a href="#" id="link">Login page?</a></p>
+    <img src="luxury images/collection.webp" alt="luxury" height="200px" width="200px" id="img"/>
+    <script>
+        let link = document.getElementById("link")
+        console.log("href attribute is :"+link.getAttribute("herf"))
+        link.setAttribute("href","https://www.flipkart.com/")
+
+        let img =document.getElementById("img")
+        img.setAttribute("src","luxury images/collection.webp")
+        img.setAttribute("height","500px")
+        img.setAttribute("width","500px")
+    </script>
+</body>
+</html>

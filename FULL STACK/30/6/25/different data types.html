@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A brief description of the webpage">
+        <meta name="author" content="M.Akash Reddy">
+        <title>Variables in JavaScript</title>
+    </head>
+    <body>
+        <script>
+            document.write("===String data types========="+"<hr>")
+            let name= "Rohit"
+            let city='Hyderabad'
+            let age= 18
+            
+            document.write("name: " + name + "<br>")
+            document.write("city: " + city + "<br>")
+            document.write("my age is: " + age + "<br>"+"<hr>")
+
+            document.write("===number data types========="+"<hr>")
+            let salary=34500
+            let bonus=388.89
+            let distance=4200
+            document.write("my salary is:"+salary++ +typeof salary+"<br>")
+            document.write("my bonus is:"+bonus++ +typeof bonus+"<br>")
+            document.write("my distance is:"+distance++ +typeof distance+"<br>"+"<hr>")
+
+            document.write("===boolean data types========="+"<hr>")
+            let isEating=true
+            let isTalking=false
+            document.write("isEating:"+isEating+" type is "+typeof isEating+"<br>")
+            document.write("isTalking:"+isTalking+" type is "+typeof isTalking+"<br>"+"<hr>")
+
+             document.write("===Undefined data types========="+"<hr>")
+             let product;
+             document.write("value is:"+product+" type is:"+typeof product+"<br>"+"<hr>")
+
+             
+             document.write("======null data types========="+"<hr>")
+             let value=null
+                document.write("value is:"+value+" type of value is "+typeof value+"<br>"+"<hr>")
+
+                 document.write("======Object representation========="+"<hr>")
+                 const person={
+                    name:"Rohit",
+                    age:18,
+                    address:"Hyderabad"
+                 }
+                 document.write("person details:"+"<br>")
+                 document.write("person name:"+person.name+"<br>")
+                 document.write("person age:"+person.age+"<br>")
+                 document.write("person address:"+person.address+"<br>")
+                 document.write("type of person is:"+typeof person+"<br>"+"<hr>")
+
+                 document.write("======Array representation========="+"<hr>")
+                    const names=["Welcome","To","India"]
+                 document.write("Values are:"+names+"<br>")
+                 document.write("values index 0:"+names[0]+"<br>")
+                 document.write("values index 1:"+names[1]+"<br>")
+                    document.write("values index 2:"+names[2]+"<br>")
+                    document.write("type of names is:"+typeof names+"<br>")
+        </script>
+        
+        
+        
+       </body>
+</html>
